@@ -12,6 +12,8 @@ public:
 	string nome;
 	bool presente;
 	int frequencia;
+
+    bool operator<(const InfoCartao &right);
 };
 
 class ParqueEstacionamento {
@@ -38,5 +40,26 @@ public:
 	void ordenaClientesPorNome();
 	vector<string> clientesGamaUso(int n1, int n2);
 };
+
+class ClienteNaoExistente {
+public:
+    string nome;
+    ClienteNaoExistente(string nome);
+    string getNome() const;
+};
+
+class PosicaoNaoExistente {
+public:
+    int pos;
+    PosicaoNaoExistente(int pos);
+    int getValor() const;
+};
+
+bool cmpICNome(const InfoCartao &left, const InfoCartao &right);
+
+ostream &operator<<(std::ostream out, const PosicaoNaoExistente &pne);
+
+ostream &operator<<(std::ostream out, const ClienteNaoExistente &cne);
+
 
 #endif /*PARQUE_H_*/
