@@ -13,7 +13,7 @@
 
 using testing::Eq;
 
-
+/*
 TEST(test_1, StackExt_FindMin){
     StackExt<int> s1;
     // Teste ao empty()
@@ -74,7 +74,7 @@ TEST(test_1, StackExt_FindMin){
     // NOTA: o parametro com valor 10 significa que sao considerados constantes valores no intervalo [-10, 10]
     EXPECT_EQ(true, isConstant(elapsedTime, size, 10));
 }
-/*
+
 TEST(test_2, a_ConstructorCliente){
     srand(time(NULL));
     Cliente c;
@@ -130,7 +130,7 @@ TEST(test_2, d_SaidaBalcao){
         EXPECT_EQ("Fila Vazia", e.getMsg());
     }
 }
-
+*/
 TEST(test_2, e_ProximoEvento){
     cout << "Este teste nao falha. Verifique na consola os valores." << endl;
     EXPECT_TRUE(true);
@@ -154,4 +154,4 @@ TEST(test_2, f_Operador){
     b.proximoEvento();
     b.proximoEvento();
     cout << b << endl;
-}*/
+}
